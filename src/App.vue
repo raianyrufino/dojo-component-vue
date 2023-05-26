@@ -1,7 +1,7 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png"> 
   
-  <custom-button texto="Botão"></custom-button>
+  <custom-button texto="Botão" funcaoClick="click"></custom-button>
 </template>
 
 <script>
@@ -11,6 +11,11 @@ export default {
   name: 'App',
   components: {
     CustomButton,
+  },
+  methods:{
+    click() {
+            alert("Clicou!");
+        }
   }
 }
 </script>
