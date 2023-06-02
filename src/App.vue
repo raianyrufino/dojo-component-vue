@@ -1,7 +1,8 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png"> 
-  
-  <custom-button texto="Botão" funcaoClick="click"></custom-button>
+  <img alt="Vue logo" src="./assets/logo.png">
+
+  <custom-button texto="Botão" funcaoClick="click" ></custom-button>
+  <custom-button texto="Botão" funcaoClick="click" type="primario"></custom-button>
 </template>
 
 <script>
@@ -12,10 +13,10 @@ export default {
   components: {
     CustomButton,
   },
-  methods:{
+  methods: {
     click() {
-            alert("Clicou!");
-        }
+      alert("Clicou!");
+    }
   }
 }
 </script>
@@ -29,7 +30,6 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
-
 </style>
 
-<!-- Teste -->>
+<!-- Teste -->

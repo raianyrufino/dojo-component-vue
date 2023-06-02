@@ -1,5 +1,5 @@
 <template>
-    <button type="button" :class="[classes]">{{ texto }}</button>
+    <button type="button" class="default" :class="[classes]" >{{ texto }}</button>
 </template>
 
 <script>
@@ -13,12 +13,12 @@ export default {
         click() {
             alert("Clicou!");
         }
-    }
+    },
     computed: {
         classes() {
             return {
-                ['primario']: this.type === 'primario',
-                ['secundario']: this.type === 'secundario',
+                ['default__primario']: this.type === 'primario',
+                ['default__secundario']: this.type === 'secundario',
             }
         }
     }
@@ -26,11 +26,17 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
- .primario {
-    background-color: blue;
- }
- .secundario {
-    background-color: green;
- }
+<style lang="scss" scoped>
+.default {
+    width: 100px;
+    height: 30px;
+
+    &__primario {
+        background-color: blue;
+        color: white;
+    }
+    &__secundario {
+        background-color: green;
+    }
+}
 </style>
